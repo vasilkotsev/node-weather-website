@@ -11,7 +11,7 @@ weatherForm.addEventListener("submit", (e) => {
     paragraph2.textContent = "";
 
     (async (location) => {
-        const response = await fetch(`http://localhost:3000/weather?address=${location}`);
+        const response = await fetch(`/weather?address=${location}`);
         const data = await response.json();
         if (data.error) {
             paragraph1.textContent = data.error;
